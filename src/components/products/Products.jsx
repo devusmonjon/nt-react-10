@@ -50,7 +50,14 @@ const Products = ({ data, title, loading = true }) => {
           alt="Photo"
         />
       </div>
-      <p>{product.name}</p>
+      <h3 className="text-xl font-bold" title={product.title}>
+        {product.title.slice(0, 20)}
+        {product.title.length > 20 ? "..." : null}
+      </h3>
+      <p title={product.description} className="my-3">
+        {product.description.slice(0, 50)}
+        {product.description.length > 50 ? "..." : null}
+      </p>
       <strong>{product.price} USD</strong>
       <div className="flex justify-end gap-3">
         {!isProductInCart(product) ? (
