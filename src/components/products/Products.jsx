@@ -50,8 +50,8 @@ const Products = ({ data, title, loading = true }) => {
           alt="Photo"
         />
       </div>
-      <p>Lorem, ipsum dolor.</p>
-      <strong>500 USD</strong>
+      <p>{product.name}</p>
+      <strong>{product.price} USD</strong>
       <div className="flex justify-end gap-3">
         {!isProductInCart(product) ? (
           <button onClick={() => addToCart(product)}>

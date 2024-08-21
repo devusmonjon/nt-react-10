@@ -51,6 +51,7 @@ const CartItems = ({ data, title, loading = true }) => {
         />
       </div>
       <div className="flex flex-col gap-3">
+        <h3 className="text-xl font-bold">{product.title}</h3>
         <p>{product.description}</p>
         <strong>{product.price} USD</strong>
       </div>
